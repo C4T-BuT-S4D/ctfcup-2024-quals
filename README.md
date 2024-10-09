@@ -1,1 +1,1 @@
-# ctfcup-2024-quals-
+# ctfcup-2024-quals
