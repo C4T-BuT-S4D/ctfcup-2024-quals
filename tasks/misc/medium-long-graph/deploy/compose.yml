@@ -1,5 +1,5 @@
 services:
-  bf_runner:
+  long_graph:
     build: .
     platform: linux/amd64
     image: "${REGISTRY}ppc-long-graph"
