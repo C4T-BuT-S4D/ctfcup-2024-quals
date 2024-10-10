@@ -1,0 +1,4 @@
+matplotlib==3.9.2
+networkx==3.3
+flask==2.3.3
+scipy==1.14.1
