@@ -1,0 +1,16 @@
+services:
+  bf_runner:
+    build: .
+    platform: linux/amd64
+    image: "${REGISTRY}ppc-long-graph"
+    restart: unless-stopped
+    ports:
+      - 7117:7117
+    cpus: 1
+    pids_limit: 64
+    mem_limit: 512m
+    environment:
+      - FLAG=ctfcup{test_flag}
+
+volumes:
+  bf_runner:
