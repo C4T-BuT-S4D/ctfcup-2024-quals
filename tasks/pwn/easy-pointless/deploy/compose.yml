@@ -1,0 +1,13 @@
+services:
+  pointless:
+    build: .
+    platform: linux/amd64
+    image: "${REGISTRY}pwn-pointless"
+    ports:
+      - "3113:3113"
+    restart: unless-stopped
+    cpus: 1
+    pids_limit: 64
+    mem_limit: 512m
+    environment:
+      - FLAG=ctfcup{test_flag}
