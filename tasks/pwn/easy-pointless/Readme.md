@@ -30,7 +30,7 @@ Simple pwn where we can inject into scanf.
 We can inject our payload into a sscanf formt, no pie, partial relro, therefore first using a technique similar to printf exploitation insert 8 `%s` formats pointing at our pointers on the stack and overwrite sscanf plt to printf got this way. Now its easy leak libc with printf and ovewrite plt sscanf to system.
 
 
-[Exploit](solve/solve.py)
+[Exploit](solve/sploit.py)
 
 
 ## Cloudflare
