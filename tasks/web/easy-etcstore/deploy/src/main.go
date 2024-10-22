@@ -324,7 +324,7 @@ func initAdmin(store *EtcdStore) {
 	}
 
 	flagKey := env("FLAG_KEY", "flag")
-	flagValue := env("FLAG_VALUE", "ctfcup{redacted}")
+	flagValue := env("FLAG", "ctfcup{redacted}")
 	if _, err := store.StoreKey(context.Background(), admin.Username, flagKey, flagValue); err != nil {
 		log.Fatalf("failed to store flag: %v", err)
 	}

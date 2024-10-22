@@ -10,10 +10,13 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /app/server
 
 FROM debian:bullseye-slim
 
+RUN apt-get update && apt-get install -y supervisor etcd
+
 COPY --from=build-stage /app/server /server
 
-RUN apt-get update && apt-get install -y supervisor etcd
 RUN mkdir -p /var/log/supervisor
 COPY conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+COPY entry.sh /entry.sh
+
+CMD ["/entry.sh"]
