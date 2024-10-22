@@ -1,0 +1,9 @@
+services:
+  web-store:
+    platform: linux/amd64
+    build: .
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      - "FLAG=ctfcup{example}"
