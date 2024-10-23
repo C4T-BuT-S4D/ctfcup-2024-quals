@@ -1,0 +1,13 @@
+services:
+  just_bfs:
+    build: .
+    platform: linux/amd64
+    image: "${REGISTRY}ppc-just-bfs"
+    ports:
+      - "2112:2112"
+    restart: unless-stopped
+    cpus: 1
+    pids_limit: 64
+    mem_limit: 512m
+    environment:
+      - FLAG=ctfcup{test_flag}
