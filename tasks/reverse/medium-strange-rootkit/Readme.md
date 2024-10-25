@@ -2,7 +2,9 @@
 
 ## Information
 
-Перед запуском запустите `echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope`.
+Я недооценил этих таинственных шпионов — они даже попытались проникнуть в нашу сеть... Как жаль, что не особо удачно. Глянь на этот руткит, может, мы раскопаем что-то интересное?
+
+I underestimated these mysterious spies - they even tried to penetrate our network... Too bad they weren't very successful. Take a look at this rootkit, maybe we'll dig up something interesting?
 
 Before running run `echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope`.
 
