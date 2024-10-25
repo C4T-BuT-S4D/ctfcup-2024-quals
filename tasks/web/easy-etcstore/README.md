@@ -2,9 +2,9 @@
 
 ## Information
 
-Обожаю делать безопасные и надежные KV-хранилища.
+Моя прелесть, моя гордость, мое совершенство! Хранилище заметок по секретному проекту по переносу сознания в мета-миры... Надеюсь, никто до него не добрался.
 
-I'm really into making secure&reliable KV-storages.
+My darling, my pride, my perfection! A repository of notes on a secret project to transfer consciousness into meta-worlds... I hope no one got to it.
 
 ## Deploy
 
