@@ -2,9 +2,9 @@
 
 ## Information
 
-Наши исследователи вредоносных программ нашли некий странный криптор.
+Этот мета-проект очень дорог для нас с Софи, ведь мы потратили на него больше двух лет активной мозговой деятельности... Разумеется, мы хорошо охраняем свои секреты. Кто к нам с мечом — того мы криптокирпичом.
 
-Our malware researchers found this weird crypter.
+This meta-project is very dear to Sophie and me, because we spent more than two years of active brainwork on it... Of course, we guard our secrets well. Whoever comes to us with a sword - we will cryptobrick them.
 
 
 ## Public
