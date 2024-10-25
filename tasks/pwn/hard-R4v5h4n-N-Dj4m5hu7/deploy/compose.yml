@@ -1,0 +1,13 @@
+services:
+  r4v5h4n:
+    build: .
+    platform: linux/amd64
+    image: "${REGISTRY}pwn-r4v5h4n"
+    ports:
+      - "1313:1313"
+    restart: unless-stopped
+    cpus: 1
+    pids_limit: 64
+    mem_limit: 512m
+    environment:
+      - FLAG=ctfcup{test_flag}
