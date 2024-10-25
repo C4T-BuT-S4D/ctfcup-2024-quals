@@ -2,9 +2,9 @@
 
 ## Information
 
-Мой друг написал бесполезный csv парсер
+Если уж Аль Капоне попался на налогах, то представьте, что творится в бухгалтерии хакерского бара! Надеюсь, за нами шпионит не налоговая, но навести порядок в записях в любом случае не помешает.
 
-My friend 
+If Al Capone got caught for tax evasion, imagine what's going on in the accounting department of a hacker bar! I hope it's not the IRS spying on us, but it wouldn't hurt to get our records in order anyway.
 
 ## Deploy
 
