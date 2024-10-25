@@ -5,8 +5,7 @@ import sys
 
 username = "test" + secrets.token_hex(10)
 
-host = sys.argv[1]
-port = '80'
+URL = sys.argv[1]
 
 def pwn(host: str, user_to_hack='admin'):
     s = requests.Session()
@@ -49,7 +48,5 @@ def pwn(host: str, user_to_hack='admin'):
 
 
 if __name__ == "__main__":
-    pwn(host)
-    
-
+    pwn(URL)
 
