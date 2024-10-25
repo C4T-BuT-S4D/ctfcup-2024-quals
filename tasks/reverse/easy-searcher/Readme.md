@@ -2,9 +2,9 @@
 
 ## Information
 
-Ищем флаги.
+О нет, кажется мои прошлогодние школьники были довольно умны. Это была одна из самых первых домашек на курсе по реверсу, а я не могу решить ее взглядом...
 
-Searching for flags.
+Oh no, it seems my students from last year were quite smart. This was one of the very first homework assignments in the reverse course, and I can't solve it with my eyes...
 
 ## Public
 
