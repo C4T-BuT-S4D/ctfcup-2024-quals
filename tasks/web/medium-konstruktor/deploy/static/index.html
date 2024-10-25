@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Viewer</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #content {
+            margin-top: 20px;
+        }
+        .error {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Website Konstruktor</h1>
+        <div id="content"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var path = window.location.pathname;
+
+            if (path === "/" || path === "/index.html") {
+                $("#content").html(`
+                    <h2>Welcome to the Markdown Viewer</h2>
+                    <p>This application allows you to view and create markdown content.</p>
+                    <p>To create new content, please visit the <a href="/create.html">Create Page</a>.</p>
+                `);
+            } else {
+                $.ajax({
+                    url: path + '.json',
+                    type: 'GET',
+                    success: function(data) {
+                        var html = DOMPurify.sanitize(`
+                            <h2>${data.title}</h2>
+                            <p><strong>Author:</strong> ${data.author}</p>
+                            <div class="markdown-content">
+                                ${marked.parse(data.markdown)}
+                            </div>
+                        `);
+                        $("#content").html(html);
+                    },
+                    error: function(xhr, status, error) {
+                        $("#content").html(`
+                            <p class="error">Error: Unable to fetch content. Please make sure the URL is correct.</p>
+                            <p>You can <a href="/create.html">create new content</a> or <a href="/">return to the home page</a>.</p>
+                        `);
+                        console.error("Error fetching content:", error);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
