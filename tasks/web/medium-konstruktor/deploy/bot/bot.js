@@ -17,8 +17,6 @@ const TIMEOUT = process.env.TIMEOUT || 300 * 1000;
 const KONSTRUKT_HOST = process.env.KONSTRUKT_HOST || 'http://localhost:8081';
 const SECRET_TOKEN = process.env.SECRET_TOKEN || "example";
 
-console.log(TIMEOUT, KONSTRUKT_HOST, SECRET_TOKEN);
-
 const POW_BITS = process.env.POW_BITS || 28;
 
 async function pow() {
