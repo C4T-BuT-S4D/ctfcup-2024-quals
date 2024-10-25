@@ -2,9 +2,9 @@
 
 ## Information
 
-Ой, Софи до сих пор хранит наше фото с первой олимпиады! Помню, сзади была ссылка на мой код...
+Ой, Софи до сих пор хранит наше фото с первой олимпиады! Помню, сзади была ссылка на мой код... Минуточку, я и правда это написал?
 
-Минуточку, я и правда это написал?
+Oh, Sophie still has our photo from the first Olympics! I remember there was a link to my code on the back... Wait a minute, did I really write that?
 
 ## Deploy
 
