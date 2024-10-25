@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "8081:80"
+    volumes:
+      - ./static:/var/www/html
+      - ./conf/nginx.conf:/etc/nginx/conf.d/default.conf
+      - json_data:/json
+    depends_on:
+      - php
+
+  php:
+    build: 
+      context: .
+      dockerfile: php.Dockerfile
+    environment:
+      - DATA_DIRECTORY=/json
+      - FLAG=${FLAG}
+      - SECRET_TOKEN=${SECRET_TOKEN}
+    volumes:
+      - json_data:/json
+  
+  bot:
+    build: 
+      context: bot
+    platform: linux/amd64
+    environment:
+      - POW_BITS=${POW_BITS}
+      - SECRET_TOKEN=${SECRET_TOKEN}
+      - KONSTRUKT_HOST=http://nginx:80
+    ports:
+      - "31338:31338"
+    
+
+volumes:
+  json_data:

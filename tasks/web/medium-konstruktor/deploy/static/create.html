@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Form</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 200px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #preview {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Markdown Form</h1>
+        <form id="markdownForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+            
+            <label for="markdown">Markdown:</label>
+            <textarea id="markdown" name="markdown" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        <h2>Preview:</h2>
+        <div id="preview"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#markdown').on('input', function() {
+                var markdownText = $(this).val();
+                var htmlText = marked.parse(markdownText);
+                $('#preview').html(
+                    DOMPurify.sanitize(htmlText));
+            });
+
+            $('#markdownForm').submit(function(e) {
+                e.preventDefault();
+                
+                var formData = {
+                    title: $('#title').val(),
+                    author: $('#author').val(),
+                    markdown: $('#markdown').val()
+                };
+
+                $.ajax({
+                    url: '/create.php',
+                    type: 'POST',
+                    data: JSON.stringify(formData),
+                    contentType: 'application/json',
+                    success: function(response) {
+                        let uid = response.uuid;
+                        console.log(uid);
+                        window.location.href = '/' + uid;
+                    },
+                    error: function(xhr, status, error) {
+                        alert('An error occurred while submitting the form.');
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
