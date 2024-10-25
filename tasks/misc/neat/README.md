@@ -1,9 +1,9 @@
 # misc | Neat
 
 ## Information
-Отдохните от компа.
+Кажется, в последний раз в нашем баре убирались, когда он еще был бункером НКВД... Всё, перерыв — жучки от нас никуда не денутся, а FOMO тянет к телефону.
 
-Take a break from your computer screen.
+Looks like the last time they cleaned this bar was when it was still an NKVD bunker... Alright, break time - those bugs ain't going anywhere, but FOMO's got me itching for my phone.
 
 ## Public
 Provide [ru.cbsctf.neat_.apk](public/ru.cbsctf.neat_.apk)
