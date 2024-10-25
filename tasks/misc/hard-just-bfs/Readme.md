@@ -2,9 +2,9 @@
 
 ## Information
 
-Простая олимпиадная задача, запустите бфс.
+Много лет назад, когда в этом здании только появились компьютерная школа с клубом и наш бар, таинственный седовласый мужчина подменил планы здания в БТИ: никто не должен был знать, что мы заняли бывший советский бункер с широкой сетью подземных проходов. Оригинал сохранился только у нас, и то в довольно специфическом виде. Если он попадет не в те руки — нам придётся несладко.
 
-Simple olympic problem, just run bfs.
+Many years ago, when this building first housed a computer school with a club and our bar, a mysterious grey-haired man changed the plans of the building in the BTI: no one was supposed to know that we occupied a former Soviet bunker with a wide network of underground passages. Only we have the original, and even then in a rather specific form. If it falls into the wrong hands, we will have a hard time.
 
 ## Deploy
 
