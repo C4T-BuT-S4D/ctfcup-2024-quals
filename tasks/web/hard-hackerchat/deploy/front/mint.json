@@ -1,0 +1,28 @@
+{
+  "name": "tg",
+  "application": {
+    "icon": "assets/favicon.png",
+    "head": "assets/head.html",
+    "title": "tg",
+    "meta": {
+      "viewport": "width=device-width, initial-scale=1, user-scalable=no",
+      "charset": "utf-8"
+    }
+  },
+  "dependencies": {
+    "mint-ui": {
+      "repository": "https://github.com/mint-lang/mint-ui",
+      "constraint": "8.0.0 <= v < 9.0.0"
+    },
+    "mint-ui-website": {
+      "repository": "file:///app/mint-ui-website",
+      "constraint": "0.1.0 <= v < 1.0.0"
+    }
+  },
+  "source-directories": [
+    "source"
+  ],
+  "test-directories": [
+    "tests"
+  ]
+}
