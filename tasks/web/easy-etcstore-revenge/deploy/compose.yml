@@ -1,0 +1,10 @@
+services:
+  web-store:
+    platform: linux/amd64
+    build: .
+    image: ${REGISTRY}web-etcstore-revenge
+    ports:
+      - "9090:8080"
+    restart: unless-stopped
+    environment:
+      - "FLAG=ctfcup{example}"
