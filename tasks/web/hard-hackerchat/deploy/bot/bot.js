@@ -46,12 +46,12 @@ async function visit() {
       isMobile: false
     });
 
+    await page1.setCookie({
+        name: 'vapor-session',
+        value: 'hIiBBm1J2XyGw9IDy9CVXpOT23ff7I8Ml5v+8qTVc94=',
+        domain: 'localhost:8080',
+    });
     await page1.goto(`${CHAT_URL}`);
-    const inputs = await page1.$$('input');
-    await inputs[0].type('admin');
-    await inputs[1].type(ADMIN_PASSWORD);
-    const button = await page1.$('button');
-    await button.click();
 
     await sleep(SLEEP_TIME);
     await shutdown();
