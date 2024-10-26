@@ -5,6 +5,7 @@ curdir="$PWD"
 pubtemp="$(mktemp -d)"
 
 mkdir "$pubtemp/just_bfs"
+cp deploy/OCRB.ttf "$pubtemp/just_bfs/"
 cp deploy/generate.py "$pubtemp/just_bfs/"
 cp deploy/olymp_problem.py "$pubtemp/just_bfs"
 cp deploy/Dockerfile "$pubtemp/just_bfs"
