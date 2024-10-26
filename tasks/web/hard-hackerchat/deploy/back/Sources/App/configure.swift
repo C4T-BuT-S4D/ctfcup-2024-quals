@@ -41,9 +41,6 @@ public func configure(_ app: Application) async throws {
     try await configureDatabase(app)
     configureSessions(app)
 
-    let fileMiddleware = FileMiddleware(
-        publicDirectory: app.directory.publicDirectory, defaultFile: "index.html")
-    app.middleware.use(fileMiddleware)
     app.middleware.use(app.sessions.middleware)
     app.middleware.use(UserSessionAuthenticator())
 
