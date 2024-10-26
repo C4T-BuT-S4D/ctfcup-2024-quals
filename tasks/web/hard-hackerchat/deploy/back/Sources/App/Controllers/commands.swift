@@ -34,7 +34,7 @@ func handleUser(req: Request, args: [String], chat: Chat, data: inout SendMsg) a
     }
 
     let callargs = FBIRequest(chat: chat.name, args: Array(args))
-    let url = Environment.get("BETA_FBI_URL") ?? "http://localhost"
+    let url = Environment.get("BETA_FBI_URl") ?? "http://localhost"
     let resp = try await req.client.send(HTTPMethod(rawValue: cmd.method), to: "\(url)\(cmd.url)", beforeSend: { req in
         try req.content.encode(callargs)
     })
