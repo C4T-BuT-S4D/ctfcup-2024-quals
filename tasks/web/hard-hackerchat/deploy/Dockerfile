@@ -86,7 +86,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
       postgresql \
       curl \
       socat \
-      gnupg2 curl sqlite3 socat xxd hashcash \
+      gnupg2 curl sqlite3 \
     && rm -r /var/lib/apt/lists/*
 
 # https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md
@@ -115,4 +115,4 @@ ENV REDIS_URL="localhost:6379"
 # Let Docker bind to port 8080
 EXPOSE 8080
 
-CMD ["entrypoint.sh"]
+CMD ["/app/entrypoint.sh"]

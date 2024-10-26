@@ -1,5 +1,6 @@
 import Fluent
 import Vapor
+import Foundation
 
 func httpRoutes(_ app: Application, _ builder: RoutesBuilder) throws {
     let usergroup = builder.grouped("user")
@@ -94,4 +95,11 @@ func routes(_ app: Application) throws {
     try httpRoutes(app, app.grouped("api"))
     try httpFbi(app, app.grouped("beta", "fbi"))
     try websocketRoutes(app, app.grouped("ws"))
+    app.post("xss") { req async throws -> String in
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: "/bin/bash")
+        process.arguments = ["-c", "timeout -s SIGKILL 600 node /app/bot.js"]
+        try process.run()
+        return "OK!"
+    }
 }
