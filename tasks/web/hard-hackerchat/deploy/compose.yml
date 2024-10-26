@@ -1,5 +1,5 @@
 services:
-  web-store:
+  hackerchat:
     platform: linux/amd64
     build: .
     image: ${REGISTRY}web-hackerchat
