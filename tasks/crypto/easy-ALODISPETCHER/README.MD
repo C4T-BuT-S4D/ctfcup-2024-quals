@@ -8,7 +8,7 @@
 
 ## Public
 
-Provide public/ directory.
+Provide public/ directory content.
 
 ## TLDR
 
