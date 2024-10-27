@@ -46,8 +46,6 @@ Path traversal to etcd wia URL-parameters in Golang.
 
 ### Чтение backend
 
-### Чтение backend
-
 Ладно, давайте копнем глубже в бэкенд. Он написан на Swift с использованием фреймворка Vapor. Основная движуха происходит в файле `routes.swift`.
 
 Вот что бросается в глаза:
