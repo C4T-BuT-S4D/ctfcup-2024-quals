@@ -21,17 +21,20 @@ Provide archive: [public/etcstore.tar.gz](public/etcstore.tar.gz).
 
 ## TLDR
 
-Path traversal to etcd wia URL-parameters in Golang.
+~~Path traversal to etcd wia URL-parameters in Golang.~~
+
+Default JWT key.
 
 ## Writeup (ru)
 
-TODO
+На сервере использовался стандартный JWT-ключ. В связи с этим можно просто получить токен админа и получить флаг.
 
 ## Writeup (en)
 
-TODO
+You can use default JWT key to get the admin token and get the flag.
 
-[Exploit](solve/solve.py)
+
+[Exploit](solve/solve_jwt.py)
 
 
 ## Cloudflare 
