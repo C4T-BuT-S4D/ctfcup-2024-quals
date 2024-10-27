@@ -29,7 +29,7 @@ use LLL for right kernel matrix of equations
 
 Так как ксор является сложением по модулю 2, то давайте разобьем каждый хеш на 64 бита и составим уравнение `Mx = 0` в `GF(2)`, где `x` лежит в `right_kernel` матрицы `M`.
 
-$$A = \begin{bmatrix}
+$$M = \begin{bmatrix}
 h_{1,1} & h_{2,1} & h_{3,1} & \cdots\\
 h_{1,2} & h_{2,2} & h_{3,2} & \cdots\\
 h_{1,3} & h_{2,3} & h_{3,3} & \cdots\\
@@ -76,7 +76,7 @@ h_{1,3} & h_{2,3} & h_{3,3} & \cdots\\
 \vdots & \ddots & &
 \end{bmatrix}$$
 
-`x` таково, что если `x_i!=0`, то мы берем хеш в сообщение, иначе не берем.
+`x` is such that if `x_i!=0`, then we take the hash in the message, otherwise we don't take it.
 
 Let's solve it with `sage`:
 
