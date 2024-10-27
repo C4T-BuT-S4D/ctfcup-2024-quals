@@ -9,7 +9,7 @@ s = requests.session()
 
 url = 'http://localhost:8080' if len(sys.argv) < 2 else sys.argv[1]
 
-admin_cookie = 'z9kxrWtxtyUH+82+9yEacnJzjrZvemdtOy/ioNoUP/k='
+admin_cookie = 'hIiBBm1J2XyGw9IDy9CVXpOT23ff7I8Ml5v+8qTVc94='
 rule_name = secrets.token_hex(16)
 print(f'{rule_name=}')
 
