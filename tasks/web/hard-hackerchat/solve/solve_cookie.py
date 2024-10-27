@@ -42,6 +42,6 @@ test
 print('send msg')
 s.post(url + '/api/chat/send', json={'content': sploit, 'chat': important_chat, 'from': '', 'replyTo': '', 'id': '', 'important': ''}).raise_for_status()
 
-time.sleep(10)
+time.sleep(1)
 print('send second msg')
 s.post(url + '/api/chat/send', json={'content': sploit, 'chat': important_chat, 'from': '', 'replyTo': '', 'id': '', 'important': ''}).raise_for_status()
