@@ -9,9 +9,9 @@
 
 # Результаты
 
-![Top](scoreboard/top.png)
+![Top](screenshots/top-all.png)
 
-[Весь скорборд](scoreboard/full.png)
+[Весь скорборд](screenshots/full-all.png)
 
 # Информация
 - Руководитель проекта: [@deviantwish](https://github.com/deviantwish)
